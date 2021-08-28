@@ -1,6 +1,7 @@
 package com.example.patikaodevv3.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="users")
+@Builder
 public class Student extends User{
 
     @Column(name="birth_date")
