@@ -18,9 +18,9 @@ public class InitializerRunner implements CommandLineRunner {
         courseDao.deleteAll();
 
         courseDao.save(Course.builder().courseCode("101").courseName("Fizik").creditScore(5).build());
-        courseDao.save(Course.builder().age(35).name("Hasan").email("ha@ah.com").build());
-        courseDao.save(Course.builder().age(56).name("Ahmet").email("ahmet@ah.com").build());
-        courseDao.save(Course.builder().age(22).name("Ayşe").email("ayse@a.com").build());
+        courseDao.save(Course.builder().courseCode("102").courseName("Matematik").creditScore(6).build());
+        courseDao.save(Course.builder().courseCode("103").courseName("Kimya").creditScore(5).build());
+
 
         courseDao.findAll().forEach(course -> logger.info("{}", course));
 
