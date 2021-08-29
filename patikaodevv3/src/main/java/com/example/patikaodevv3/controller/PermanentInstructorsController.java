@@ -25,7 +25,7 @@ public class PermanentInstructorsController {
     }
     @GetMapping("/findById/{id}")
     public ResponseEntity<PermanentInstructor> findPermanentInstructorById(@PathVariable int id){
-        return  new ResponseEntity<>(permanentInstructorService.findById(id),HttpStatus.OK);
+        return  new ResponseEntity(permanentInstructorService.findById(id),HttpStatus.OK);
     }
     @PostMapping("/savePermanentInstructor")
     public PermanentInstructor savePermanentInstructor(PermanentInstructor permanentInstructor){

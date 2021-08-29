@@ -1,6 +1,7 @@
 package com.example.patikaodevv3.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 

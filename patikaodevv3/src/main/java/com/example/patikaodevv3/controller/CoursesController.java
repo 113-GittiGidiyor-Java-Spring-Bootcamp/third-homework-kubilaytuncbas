@@ -38,7 +38,7 @@ public class CoursesController {
     }
     @GetMapping("/{id}")
     public ResponseEntity<Course> findCourseById(@PathVariable int id ){
-        return new ResponseEntity<>(courseService.findById(id),HttpStatus.OK);
+        return new ResponseEntity(courseService.findById(id),HttpStatus.OK);
     }
 
 }

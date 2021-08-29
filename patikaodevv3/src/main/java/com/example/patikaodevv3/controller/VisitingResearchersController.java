@@ -1,6 +1,5 @@
 package com.example.patikaodevv3.controller;
 
-import com.example.patikaodevv3.model.PermanentInstructor;
 import com.example.patikaodevv3.model.User;
 import com.example.patikaodevv3.model.VisitingResearcher;
 import com.example.patikaodevv3.service.VisitingResearcherService;
@@ -10,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/visiting")
@@ -27,6 +27,7 @@ public class VisitingResearchersController {
     }
     @GetMapping("/findById/{id}")
     public ResponseEntity<VisitingResearcher> findVisitingResearcherById(@PathVariable int id){
+
         return new ResponseEntity<>(visitingResearcherService.findById(id),HttpStatus.OK);
     }
     @PostMapping("/saveVisitingResearcher")

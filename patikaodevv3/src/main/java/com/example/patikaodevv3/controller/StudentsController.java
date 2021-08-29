@@ -26,7 +26,7 @@ public class StudentsController {
     }
     @GetMapping("/findById/{id}")
     public ResponseEntity<Student> findStudentById(@PathVariable int id){
-        return new ResponseEntity<>(studentService.findById(id),HttpStatus.OK);
+        return new ResponseEntity(studentService.findById(id),HttpStatus.OK);
     }
     @PostMapping("/saveStudent")
     public Student saveStudent(Student student){
