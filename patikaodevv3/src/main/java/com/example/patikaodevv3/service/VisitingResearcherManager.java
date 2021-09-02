@@ -22,8 +22,8 @@ public class VisitingResearcherManager implements VisitingResearcherService{
     }
 
     @Override
-    public Optional<VisitingResearcher> findById(int id) {
-        return visitingResearcherDao.findById(id);
+    public VisitingResearcher findById(int id) {
+        return visitingResearcherDao.findById(id).get();
     }
 
     @Override

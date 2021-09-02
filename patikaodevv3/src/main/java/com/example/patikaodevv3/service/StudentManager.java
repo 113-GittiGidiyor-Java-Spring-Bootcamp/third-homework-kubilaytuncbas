@@ -23,8 +23,8 @@ public class StudentManager implements StudentService{
     }
 
     @Override
-    public Optional<Student> findById(int id) {
-        return studentDao.findById(id);
+    public Student findById(int id) {
+        return studentDao.findById(id).get();
     }
 
     @Override

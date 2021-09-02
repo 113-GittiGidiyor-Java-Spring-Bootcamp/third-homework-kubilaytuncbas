@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface PermanentInstructorService {
 
     List<PermanentInstructor> findAll();
-    Optional<PermanentInstructor> findById(int id);
+    PermanentInstructor findById(int id);
     PermanentInstructor save(PermanentInstructor permanentInstructor);
     void deleteById(int id);
     void update(PermanentInstructor permanentInstructor);

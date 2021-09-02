@@ -5,8 +5,9 @@ import com.example.patikaodevv3.repository.CourseDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class CourseManager implements CourseService{
@@ -22,8 +23,9 @@ public class CourseManager implements CourseService{
     }
 
     @Override
-    public Optional<Course> findById(int id) {
-        return courseDao.findById(id);
+    @Transactional(readOnly = true)
+    public Course findById(int id) {
+        return courseDao.findById(id).get();
     }
 
     @Override

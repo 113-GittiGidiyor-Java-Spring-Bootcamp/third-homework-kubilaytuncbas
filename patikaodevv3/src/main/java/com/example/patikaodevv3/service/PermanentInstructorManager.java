@@ -21,8 +21,8 @@ public class PermanentInstructorManager implements PermanentInstructorService{
     }
 
     @Override
-    public Optional<PermanentInstructor> findById(int id) {
-        return permanentInstructorDao.findById(id);
+    public PermanentInstructor findById(int id) {
+        return permanentInstructorDao.findById(id).get();
     }
 
     @Override

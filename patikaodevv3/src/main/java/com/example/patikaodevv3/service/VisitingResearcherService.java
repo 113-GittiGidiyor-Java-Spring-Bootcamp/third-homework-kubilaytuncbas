@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface VisitingResearcherService {
 
     List<VisitingResearcher> findAll();
-    Optional<VisitingResearcher> findById(int id);
+    VisitingResearcher findById(int id);
     VisitingResearcher save(VisitingResearcher visitingResearcher);
     void deleteById(int id);
     void update(VisitingResearcher visitingResearcher);
